@@ -20,11 +20,14 @@ ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 RUN npm install -g reveal-md
 RUN npm install puppeteer
 
-# Install necessary plugins
-COPY package.json .
-RUN npm install
+# Create plugin directory and download audio-slideshow plugin
+RUN mkdir -p plugin/audio-slideshow && \
+    cd plugin/audio-slideshow && \
+    wget https://raw.githubusercontent.com/rajgoel/reveal.js-plugins/master/audio-slideshow/plugin.js && \
+    wget https://raw.githubusercontent.com/rajgoel/reveal.js-plugins/master/audio-slideshow/recorder.js && \
+    wget https://raw.githubusercontent.com/rajgoel/reveal.js-plugins/master/audio-slideshow/style.css
 
-# Copy configuration files first
+# Copy configuration files
 COPY package.json reveal-md.json reveal.json template.html ./
 
 # Install dependencies
