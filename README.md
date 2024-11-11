@@ -15,6 +15,7 @@ using :
 * https://github.com/hakimel/reveal.js
 * https://github.com/webpro/reveal-md
 * https://github.com/rajgoel/reveal.js-plugins
+* https://github.com/rajgoel/reveal.js-plugins/tree/master/audio-slideshow
 
 To try it locally on <http://127.0.0.1:4238> , you can use:
 
