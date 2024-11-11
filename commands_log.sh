@@ -1,5 +1,12 @@
 #!/bin/bash
 set -x
 
-#./phind/gen_markdown_report_question_build.sh | tee phind/phind-Q03.md | xcc ; vim phind/phind-Q03.md
-aider --4o build.sh Dockerfile reveal.json  README.md -f phind/phind-Q03.md 
+function gen_build_sh_md_and_aider_v00() {
+local QFILE="$1"
+if [ -r "$QFILE" ]; then echo "ERROR: FILE $QFILE ALREADY EXISTS!"; exit 1; fi
+./phind/gen_markdown_report_question_build.sh | tee "$QFILE" | xcc ; vim "$QFILE"
+aider --4o build.sh Dockerfile reveal.json  README.md -f "$QFILE" 
+}
+
+# gen_build_sh_md_and_aider_v00 phind/phind-Q03.md
+gen_build_sh_md_and_aider_v00 phind/phind-Q04.md
