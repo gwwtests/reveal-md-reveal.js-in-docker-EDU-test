@@ -25,6 +25,12 @@ https://www.phind.com/search?cache=bvww0tsv9sj6sgjfiycjpe72
 
 in debugggin issue, logged in that very thread and using  `bash commands_log.sh`.
 
+One can observe debugging/troubleshooting/investigative setups in 
+
+* `phind`
+
+folder, each file is each step, of generated output by `build.sh` and answer by `phind.com` pro with sonnet-3.5.
+
 ## Testing
 
 To try it locally on <http://127.0.0.1:4238> , you can use:
