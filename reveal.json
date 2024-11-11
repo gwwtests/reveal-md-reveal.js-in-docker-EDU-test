@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "audio-slideshow",
+    "reveal.js-plugins/audio-slideshow/plugin.js"
+  ],
+  "audio": {
+    "prefix": "audio/",
+    "suffix": ".ogg",
+    "autoplay": false
+  }
+}
+

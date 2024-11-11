@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "reveal.js": "^4.3.1",
+    "reveal.js-plugins": "latest"
+  }
+}
+
