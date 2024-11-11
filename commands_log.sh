@@ -4,10 +4,8 @@ set -x
 function xcc() { xclip -sel clipboard; }
 
 function gen_build_sh_md_and_aider_v01() {
-for f in "$@"
-do
-  if [ ! -r "$f" ]
-  then
+for f in "$@" ; do
+  if [ ! -r "$f" ]; then
     echo "ERROR:FILE_NOT_READABLE:$f"
     exit 1
   fi
