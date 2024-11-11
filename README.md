@@ -15,3 +15,9 @@ using :
 * https://github.com/hakimel/reveal.js
 * https://github.com/webpro/reveal-md
 * https://github.com/rajgoel/reveal.js-plugins
+
+To try it locally on <http://127.0.0.1:4238> , you can use:
+
+```
+host_dist_on_port_4238.sh
+```
