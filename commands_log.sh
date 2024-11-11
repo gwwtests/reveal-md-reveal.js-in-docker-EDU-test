@@ -34,5 +34,5 @@ gen_build_sh_md_and_aider_v01 "$QFILE" build.sh Dockerfile reveal.json  README.m
 # gen_build_sh_md_and_aider_v00 phind/phind-Q05.md
 # gen_build_sh_md_and_aider_v00 phind/phind-Q06.md
 # gen_build_sh_md_and_aider_v01 phind/phind-Q07.md build.sh Dockerfile reveal.json README.md slides/slides.md template.html audio-slideshow/slides.md
-gen_build_sh_md_and_aider_v01 phind/phind-Q08.md build.sh Dockerfile reveal.json README.md slides/slides.md template.html audio-slideshow/slides.md
-#gen_build_sh_md_and_aider_v01 phind/phind-Q09.md build.sh Dockerfile reveal.json README.md slides/slides.md template.html audio-slideshow/slides.md package.json
+# gen_build_sh_md_and_aider_v01 phind/phind-Q08.md build.sh Dockerfile reveal.json README.md slides/slides.md template.html audio-slideshow/slides.md
+gen_build_sh_md_and_aider_v01 phind/phind-Q09.md build.sh Dockerfile reveal.json README.md slides/slides.md template.html audio-slideshow/slides.md package.json
