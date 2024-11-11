@@ -17,3 +17,4 @@ fi
 
 # gen_build_sh_md_and_aider_v00 phind/phind-Q03.md
 # gen_build_sh_md_and_aider_v00 phind/phind-Q04.md
+# gen_build_sh_md_and_aider_v00 phind/phind-Q05.md
