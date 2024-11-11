@@ -14,6 +14,7 @@ for f in "$@" ; do
 done
 if [ -r "$QFILE" ]; then echo "ERROR: FILE $QFILE ALREADY EXISTS!"; exit 1; fi
 ./phind/gen_markdown_report_question_build.sh | tee "$QFILE" | xcc && vim "$QFILE"|| exit 1
+git add "$QFILE" ; git commit -m "+= $QFILE"
 read -p 'Shall we proceed with aider? [yes/y]' answer
 if [ "$answer" != "yes" ] && [ "$answer" != "y" ]; then
   exit 1
