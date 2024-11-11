@@ -27,6 +27,6 @@ RUN npm install
 # Copy presentation files
 COPY . .
 
-# Command to generate static site
-CMD ["reveal-md", "audio-slideshow/slides.md", "--static", "dist", "--assets-dir", "assets"]
+# Command to generate static site with template
+CMD ["reveal-md", "audio-slideshow/slides.md", "--static", "dist", "--assets-dir", "assets", "--template", "template.html"]
 
