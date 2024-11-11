@@ -12,6 +12,10 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /presentation
 
+# Set Puppeteer environment variables
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
+
 # Install reveal-md and Puppeteer
 RUN npm install -g reveal-md
 RUN npm install puppeteer
