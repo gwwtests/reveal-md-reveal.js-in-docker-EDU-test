@@ -4,15 +4,14 @@ set -ex
 # Check for required directories
 mkdir -p assets/audio assets/images slides
 
-# Check for audio files
-if [ ! -d "assets/audio" ] || [ -z "$(ls -A assets/audio)" ]; then
-    echo "Warning: No audio files found in assets/audio/"
-    echo "Creating test audio file..."
-    if command -v ffmpeg >/dev/null 2>&1; then
-        ffmpeg -f lavfi -i "sine=frequency=1000:duration=1" assets/audio/test.ogg
-    else
-        echo "FFmpeg not found. Please add audio files manually to assets/audio/"
-    fi
+# Move audio files if they exist in slides/playback
+if [ -d "slides/playback" ]; then
+    cp slides/playback/*.ogg assets/audio/ || true
+fi
+
+# Move images if they exist
+if [ -f "slides/jungle.jpg" ]; then
+    cp slides/jungle.jpg assets/images/
 fi
 
 # Check for slides.md
