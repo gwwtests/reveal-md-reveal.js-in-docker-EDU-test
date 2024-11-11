@@ -23,9 +23,8 @@ RUN npm install puppeteer
 # Create plugin directory and download audio-slideshow plugin
 RUN mkdir -p plugin/audio-slideshow && \
     cd plugin/audio-slideshow && \
-    wget https://raw.githubusercontent.com/rajgoel/reveal.js-plugins/master/audio-slideshow/plugin.js && \
-    wget https://raw.githubusercontent.com/rajgoel/reveal.js-plugins/master/audio-slideshow/recorder.js && \
-    wget https://raw.githubusercontent.com/rajgoel/reveal.js-plugins/master/audio-slideshow/style.css
+    curl \
+    && ./download-plugins.sh
 
 # Copy configuration files
 COPY package.json reveal-md.json reveal.json template.html ./

@@ -21,6 +21,11 @@ if [ ! -f "slides/slides.md" ]; then
     exit 1
 fi
 
+# Download plugins if they don't exist
+if [ ! -d "plugin/audio-slideshow" ]; then
+    ./download-plugins.sh
+fi
+
 # Build Docker image (show last 25 lines)
 docker build --progress=plain -t reveal-static . 2>&1 | tail -n 25
 
