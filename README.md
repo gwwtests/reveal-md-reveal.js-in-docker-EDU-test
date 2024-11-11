@@ -22,3 +22,9 @@ To try it locally on <http://127.0.0.1:4238> , you can use:
 ```
 host_dist_on_port_4238.sh
 ```
+
+You may want to ensure that produced assets by docker have right permissions for your user:
+
+```
+sudo chown -Rv $USER:$(id -gn) .
+```
