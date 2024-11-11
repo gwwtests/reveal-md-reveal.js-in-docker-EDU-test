@@ -1,0 +1,12 @@
+{
+  "template": "template.html",
+  "separator": "^---",
+  "verticalSeparator": "^--",
+  "scripts": [
+    "plugin/audio-slideshow/plugin.js",
+    "plugin/audio-slideshow/recorder.js"
+  ],
+  "css": [
+    "plugin/audio-slideshow/style.css"
+  ]
+}

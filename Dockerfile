@@ -24,7 +24,13 @@ RUN npm install puppeteer
 COPY package.json .
 RUN npm install
 
-# Copy presentation files
+# Copy configuration files first
+COPY package.json reveal-md.json reveal.json template.html ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the files
 COPY . .
 
 # Command to generate static site with template
