@@ -34,5 +34,5 @@ RUN npm install
 COPY . .
 
 # Command to generate static site with template
-CMD ["reveal-md", "audio-slideshow/slides.md", "--static", "dist", "--assets-dir", "assets", "--template", "template.html"]
+CMD ["reveal-md", "slides/slides.md", "--static", "dist", "--assets-dir", "assets", "--template", "template.html"]
 

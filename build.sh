@@ -29,5 +29,5 @@ fi
 docker build --progress=plain -t reveal-static . 2>&1 | tail -n 25
 
 # Run container to generate static content
-docker run --rm -v $(pwd):/presentation reveal-static
+docker run --rm -v $(pwd):/presentation reveal-static slides/slides.md --static dist --assets-dir assets --template template.html
 
