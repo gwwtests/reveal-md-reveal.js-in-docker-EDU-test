@@ -23,7 +23,9 @@ fi
 }
 
 function gen_build_sh_md_and_aider_v00() {
-gen_build_sh_md_and_aider_v01 "$QFILE" Dockerfile reveal.json  README.md 
+local QFILE="$1"
+shift 1
+gen_build_sh_md_and_aider_v01 "$QFILE" Dockerfile reveal.json  README.md "$@"
 }
 
 # gen_build_sh_md_and_aider_v00 phind/phind-Q03.md
