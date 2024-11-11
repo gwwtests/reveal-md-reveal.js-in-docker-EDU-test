@@ -1,12 +1,12 @@
 {
   "template": "template.html",
-  "separator": "^---",
-  "verticalSeparator": "^--",
+  "separator": "<!--s-->",
+  "verticalSeparator": "<!--v-->",
+  "theme": "black",
+  "staticDirs": ["assets"],
+  "css": ["plugin/audio-slideshow/style.css"],
   "scripts": [
-    "plugin/audio-slideshow/plugin.js",
-    "plugin/audio-slideshow/recorder.js"
-  ],
-  "css": [
-    "plugin/audio-slideshow/style.css"
+    "assets/plugin/audio-slideshow/plugin.js",
+    "assets/plugin/audio-slideshow/recorder.js"
   ]
 }
