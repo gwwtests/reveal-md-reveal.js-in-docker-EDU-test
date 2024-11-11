@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-alias xcc='xclip -sel clipboard'
+function xcc(){ xclip -sel clipboard'; }
 
 function gen_build_sh_md_and_aider_v00() {
 local QFILE="$1"
