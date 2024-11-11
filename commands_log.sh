@@ -19,7 +19,7 @@ read -p 'Shall we proceed with aider? [yes/y]' answer
 if [ "$answer" != "yes" ] && [ "$answer" != "y" ]; then
   exit 1
 else
-  aider --4o build.sh -f "$QFILE" "$@"
+  aider --4o -f "$QFILE" "$@"
 fi
 }
 
@@ -33,4 +33,4 @@ gen_build_sh_md_and_aider_v01 "$QFILE" Dockerfile reveal.json  README.md "$@"
 # gen_build_sh_md_and_aider_v00 phind/phind-Q04.md
 # gen_build_sh_md_and_aider_v00 phind/phind-Q05.md
 # gen_build_sh_md_and_aider_v00 phind/phind-Q06.md
-gen_build_sh_md_and_aider_v01 phind/phind-Q07.md Dockerfile reveal.json README.md slides/slides.md template.html
+gen_build_sh_md_and_aider_v01 phind/phind-Q07.md Dockerfile reveal.json README.md slides/slides.md template.html audio-slideshow/slides.md
