@@ -1,9 +1,20 @@
 FROM node:16
 
+# Add Chrome dependencies for Puppeteer
+RUN apt-get update && apt-get install -y \
+    chromium \
+    libgbm1 \
+    libasound2 \
+    fonts-liberation \
+    libappindicator3-1 \
+    xdg-utils \
+    --no-install-recommends
+
 WORKDIR /presentation
 
-# Install reveal-md
+# Install reveal-md and Puppeteer
 RUN npm install -g reveal-md
+RUN npm install puppeteer
 
 # Install necessary plugins
 COPY package.json .
